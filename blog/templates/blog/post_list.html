@@ -1,22 +1,12 @@
-<html>
-    <head>
-        <title>Isma blog</title>
-    </head>
-    <body>
-		<div>
-			<p>Hi there!</p>
-			<p>It works!</p>
-		</div>
-		<div>
-			<h1><a href="http://as.com">Isma Blog</a></h1>
-		</div>
-
+{% extends 'blog/base.html' %}
+	{% block content %}
 		{% for post in posts %}
-			<div>
-				<p>published: {{ post.published_date }}</p>
-				<h2><a href="http:/marca.com">{{ post.title }}</a></h2>
+			<div class="post">
+				<div class="date">
+					<p>published: {{ post.published_date }}</p>
+				</div>
+				<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 				<p>{{ post.text|linebreaksbr }}</p>
 			</div>
 		{% endfor %}
-    </body>
-</html>
+	{% endblock %}

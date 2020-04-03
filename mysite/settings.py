@@ -26,7 +26,7 @@ SECRET_KEY = '_9!g^4r4(ly@!z%sf721-&8bsm-=0k8%!v0i+2eq94(3k69m(q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ismaroma.pythonanywhere.com"]
 
 
 # Application definition

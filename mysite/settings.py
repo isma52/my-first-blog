@@ -26,7 +26,7 @@ SECRET_KEY = '_9!g^4r4(ly@!z%sf721-&8bsm-=0k8%!v0i+2eq94(3k69m(q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ismaroma.pythonanywhere.com"]
+ALLOWED_HOSTS = ["ismaroma.pythonanywhere.com",'127.0.0.1']
 
 
 # Application definition
@@ -75,13 +75,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ismablog',
+        'USER': 'isma2',
+        'PASSWORD': 'Tinpony70',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
